@@ -1,15 +1,50 @@
 
+body{
+  width: 75%;
+  margin: auto;
+  background-color: #f1f2f6;
+}
+
+.navbar{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size:xx-large;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+  background-color: #26c683;
+}
+
+.headerContainer{
+  margin-top:150px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.headerContainer img{
+  height: 150px;
+  width: max-content;
+  border-radius: 75px;
+}
+
 .heroContainer{
-  margin: 20px;
-  border: solid;
+  margin: 5px;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
 }
 
 .container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px; 
+  grid-template-columns: repeat(3, 33.3%); 
   text-align: center;
 }
 
@@ -20,9 +55,9 @@
 }
 
 .heroContainer img{
-  margin: auto;
+  margin: 15px auto;
   width: max-content;
-  height: 200px;
+  height: 150px;
 }
 
 .heroButtonContainer{

@@ -5,8 +5,6 @@ function Hero() {
   return (
     
     <div>
-
-
         <div className='container'>
         {data.map((hero)=>(
             <div className='heroContainer' key={hero.id}>
