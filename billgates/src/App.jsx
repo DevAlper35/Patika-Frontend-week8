@@ -3,32 +3,27 @@ import { useState } from "react"
 import data from './data.json'
 
 function App() {
-
   const [totalMoney, setTotalMoney] = useState(100000000000)
-  const [itemInput, setItemInput] = useState(0)
   
+  let newValue = event.target.value;
+
   function sellFunc(){
     if(itemInput > 0){
-          setItemInput(itemInput - 1)
-         }
-    inputFunc    
+      setItemInput(itemInput - 1)
+    }
+    inputFunc
   }
 
   function buyFunc(){
     
+    setItemInput(itemInput + 1)
     inputFunc
   }
 
-  function inputFunc(){
-    
-    let price = data[1].price
-    //setTotalMoney(totalMoney - (price*itemInput))
-    setTotalMoney(price)
-  };
-
-  const buyFunct = (hero) => {
-    setItemInput(prevItemInput => itemInput + 1)
-    setTotalMoney(prevPrice => prevPrice - hero.price);
+  
+  const inputFunct = (hero) => {
+    handleInputChange
+    setTotalMoney(totalMoney - (hero.price * value));
   };
 
   return (
@@ -53,19 +48,12 @@ function App() {
                 <div><span className='heroPrice'>${hero.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</span></div>
                 <div className='heroButtonContainer'>
                     <button className='btnHeroSell'onClick={sellFunc}>Sell</button>
-                    <input value={itemInput} onChange={(e) => handleInputChange(hero.id, e.target.value)} type="number" />
-                    <button className='btnHeroBuy' onClick={() => buyFunct(hero)}>Buy</button>  
+                    <input type="number" value={() =>handleInputChange()} onChange={() => inputFunct(hero)}/>
+                    <button className='btnHeroBuy' onClick={buyFunc}>Buy</button>  
                 </div>
             </div>  
         ))}
-        
-        
       </div>
-
-
-
-
-
     </>
   )
 }
