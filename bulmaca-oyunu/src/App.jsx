@@ -6,6 +6,7 @@ function App() {
   const [index , setIndex] = useState(0);
   const [soru , setSoru] = useState("");
   const [cevap, setCevap] = useState("");
+  const [cevapArray, setCevapArray] = useEffect([]);
 
   useEffect(()=>{
     const cevap = DATA[index].cevap.toLowerCase()
