@@ -30,7 +30,7 @@ function App() {
     <>
       <div className="headerContainer">
         <img src="./img/billgates.jpg" alt="billgates" />
-        <h1>Spend Bill Gates' Money</h1>
+        <h1>Spend Bill Gates Money</h1>
       </div>
 
       <div className="navbar">
